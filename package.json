@@ -1,0 +1,10 @@
+{
+  "name": "PayBaseCodeTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Niral",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
