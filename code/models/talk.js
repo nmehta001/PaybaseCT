@@ -1,11 +1,13 @@
 const Mongoose = require('mongoose');
 
-const TalkSchema = new Mongoose.Schema({
+const Schema = Mongoose.Schema;
+
+const TalkSchema = new Schema({
   id: String,
   name: String,
   description: String,
-  speakers: [{type: String}],
-  attendees: [{type: String}],
+  speakers: {any: Schema.Types.Mixed},
+  attendees: {any: Schema.Types.Mixed},
   talkTime: Number,
   talkDuration: Number,
   maxAttendees: Number,
