@@ -1,12 +1,12 @@
-class Attendee {
-  constructor(data) {
-    if (!data) {
-      return;
-    }
+const Mongoose = require('mongoose');
 
-    this.id = data.id;
-    this.name = data.name;
-    this.registered = data.registered;
-    this.rsvp = data.rsvp;
-  }
-}
+const AttendeeSchema = new Mongoose.Schema({
+  id: String,
+  name: String,
+  registered: Boolean,
+  rsvp: [String],
+});
+
+const Attendee = Mongoose.model('Attendee', AttendeeSchema);
+
+module.exports = Mongoose.model('Attendee');

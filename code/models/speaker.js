@@ -1,12 +1,12 @@
-class Speaker {
-  constructor(data) {
-    if (!data) {
-      return;
-    }
+const Mongoose = require('mongoose');
 
-    this.id = data.id;
-    this.name = data.name;
-    this.description = data.description;
-    this.image = data.image;
-  }
-}
+const SpeakerSchema = new Mongoose.Schema({
+  id: String,
+  name: String,
+  description: String,
+  image: String,
+});
+
+const Speaker = Mongoose.model('Speaker', SpeakerSchema);
+
+module.exports = Mongoose.model('Speaker');
