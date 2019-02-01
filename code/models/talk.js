@@ -2,6 +2,7 @@ const Mongoose = require('mongoose');
 
 const Schema = Mongoose.Schema;
 
+// Define schema
 const TalkSchema = new Schema({
   id: String,
   name: String,
@@ -13,6 +14,8 @@ const TalkSchema = new Schema({
   maxAttendees: Number,
 });
 
+// Declare model to mongoose
 const Talk = Mongoose.model('Talk', TalkSchema);
 
+// Declare model to node
 module.exports = Mongoose.model('Talk');

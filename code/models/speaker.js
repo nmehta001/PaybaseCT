@@ -1,5 +1,6 @@
 const Mongoose = require('mongoose');
 
+// Define schema
 const SpeakerSchema = new Mongoose.Schema({
   id: String,
   name: String,
@@ -7,6 +8,8 @@ const SpeakerSchema = new Mongoose.Schema({
   image: String,
 });
 
+// Declare model to mongoose
 const Speaker = Mongoose.model('Speaker', SpeakerSchema);
 
+// Export model to node
 module.exports = Mongoose.model('Speaker');
