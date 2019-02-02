@@ -1,10 +1,15 @@
 const Talk = require('../models/talk');
 
-async function findAll(ctx) {
-  // Fetch all Talk’s from the database and return as payload
-  const todos = await Talk.find({});
-  ctx.body = todos;
-}
+Talk.find({}, (err, talks) => {
+  if (err) throw err;
+  console.log(talks);
+});
+
+// async function findAll(ctx) {
+//   // Fetch all Talk’s from the database and return as payload
+//   const talks = await Talk.find({});
+//   ctx.body = talks;
+// }
 
 async function update(ctx) {
   // Find Talk based on id, then toggle done on/off
@@ -16,7 +21,7 @@ async function update(ctx) {
   ctx.body = updatedAttendees;
 }
 
-module.exports = {
-  findAll,
-  update,
-};
+// module.exports = {
+//   find,
+//   update,
+// };

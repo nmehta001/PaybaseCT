@@ -15,7 +15,7 @@ const TalkSchema = new Schema({
 });
 
 // Declare model to mongoose
-const Talk = Mongoose.model('Talk', TalkSchema, 'talk');
+const Talk = Mongoose.model('Talk', TalkSchema, 'Talks');
 
 // Declare model to node
-module.exports = Mongoose.model('Talk');
+module.exports = Talk;
