@@ -5,7 +5,7 @@ const findTalks = async () => {
   console.log(talks);
 };
 
-const updateSelectedTalk = async (ctx, index, updatedObject) => {
+const updateSelectedTalk = async (index, updatedObject) => {
   Talk.findByIdAndUpdate(index, updatedObject, (err, talk) => {
     if (err) throw err;
     console.log(talk);

@@ -10,6 +10,12 @@ const connect = () => {
   });
 };
 
+// TODO: Revisit this, it kills the connection before any queries can be made
+const disconnect = () => {
+  Mongoose.connection.close();
+};
+
 module.exports = {
   connect,
+  disconnect,
 };
