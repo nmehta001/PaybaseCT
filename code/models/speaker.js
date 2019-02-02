@@ -12,4 +12,4 @@ const SpeakerSchema = new Mongoose.Schema({
 const Speaker = Mongoose.model('Speaker', SpeakerSchema);
 
 // Export model to node
-module.exports = Mongoose.model('Speaker');
+module.exports = Speaker;

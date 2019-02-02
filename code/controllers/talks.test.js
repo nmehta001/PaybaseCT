@@ -1,3 +1,8 @@
+const Talk = require('../controllers/talks');
 const Tape = require('tape');
 
-Tape()
+Tape('Find all talks', (t) => {
+  const talks = Talk.findTalks();
+  console.log(talks);
+  t.end();
+});

@@ -12,4 +12,4 @@ const AttendeeSchema = new Mongoose.Schema({
 const Attendee = Mongoose.model('Attendee', AttendeeSchema);
 
 // Export model to use in node
-module.exports = Mongoose.model('Attendee');
+module.exports = Attendee;
