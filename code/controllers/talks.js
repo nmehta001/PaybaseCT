@@ -1,12 +1,8 @@
 const Talk = require('../models/talk');
 
-const findTalks = async (ctx) => {
+const findTalks = async () => {
   const talks = await Talk.find({});
-  if (!talks || talks === null) {
-    throw new Error("Talk documents not found");
-  } else {
-    ctx.body = talks;
-  }
+  console.log(talks);
 };
 
 const updateSelectedTalk = async (ctx, index, updatedObject) => {
