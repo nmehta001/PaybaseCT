@@ -1,5 +1,4 @@
 const Mongoose = require('mongoose');
-const Speaker = require('./speaker').schema;
 
 const Schema = Mongoose.Schema;
 

@@ -3,6 +3,7 @@
     "rules": {
         "no-console": "off",
         "object-curly-spacing": "off",
+        "prefer-destructuring": "off",
         "quotes": "off"
     }
 }

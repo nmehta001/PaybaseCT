@@ -1,8 +1,9 @@
 const Mongoose = require('mongoose');
-const Talk = require('./talk').schema;
+
+const Schema = Mongoose.Schema;
 
 // Define schema
-const AttendeeSchema = new Mongoose.Schema({
+const AttendeeSchema = new Schema({
   _id: {type: Number},
   name: {type: String},
   isGeneralAttendee: {type: Boolean},

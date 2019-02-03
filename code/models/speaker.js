@@ -1,7 +1,9 @@
 const Mongoose = require('mongoose');
 
+const Schema = Mongoose.Schema;
+
 // Define schema
-const SpeakerSchema = new Mongoose.Schema({
+const SpeakerSchema = new Schema({
   _id: {type: Number},
   name: {type: String},
   bio: {type: String},
