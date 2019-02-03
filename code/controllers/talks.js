@@ -12,6 +12,10 @@ const updateSelectedTalk = async (id, updatedObject) => {
   });
 };
 
+const joinSpeakers = async () => {
+
+};
+
 module.exports = {
   findTalks,
   updateSelectedTalk,

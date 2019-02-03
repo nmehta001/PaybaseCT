@@ -9,13 +9,13 @@ Tape('Find all talks', (t) => {
 });
 
 
-// Tape('Find item by id and update the name', (t) => {
-//   Db.connect();
-//   const updatedObject = {
-//     $set: {
-//       name: "Machine Learning with Lisp",
-//     },
-//   };
-//   Talk.updateSelectedTalk(1, updatedObject);
-//   t.end();
-// });
+Tape('Find item by id and update the name', (t) => {
+  Db.connect();
+  const updatedObject = {
+    $set: {
+      name: "Machine Learning with Lisp",
+    },
+  };
+  Talk.updateSelectedTalk(1, updatedObject);
+  t.end();
+});

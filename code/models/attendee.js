@@ -6,7 +6,7 @@ const AttendeeSchema = new Mongoose.Schema({
   _id: {type: Number},
   name: {type: String},
   isGeneralAttendee: {type: Boolean},
-  rsvp: {type: Mongoose.Types.ObjectId, ref: Talk},
+  rsvp: {type: [Number]},
 });
 
 // Declare model to mongoose
