@@ -1,4 +1,5 @@
 const Mongoose = require('mongoose');
+const Speaker = require('./speaker').schema;
 
 const Schema = Mongoose.Schema;
 
@@ -7,7 +8,7 @@ const TalkSchema = new Schema({
   _id: {type: Number},
   name: {type: String},
   description: {type: String},
-  speakers: {any: Schema.Types.Mixed},
+  speakers: {any: Schema.Types.ObjectId, ref: Speaker},
   attendees: {any: Schema.Types.Mixed},
   talkTime: {type: Number},
   talkDuration: {type: Number},

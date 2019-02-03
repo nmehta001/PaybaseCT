@@ -2,14 +2,14 @@ const Mongoose = require('mongoose');
 
 // Define schema
 const SpeakerSchema = new Mongoose.Schema({
-  id: String,
-  name: String,
-  description: String,
-  image: String,
+  _id: {type: Number},
+  name: {type: String},
+  bio: {type: String},
+  image: {type: String},
 });
 
 // Declare model to mongoose
-const Speaker = Mongoose.model('Speaker', SpeakerSchema);
+const Speaker = Mongoose.model('Speaker', SpeakerSchema, 'Speakers');
 
 // Export model to node
 module.exports = Speaker;
