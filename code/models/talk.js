@@ -4,14 +4,14 @@ const Schema = Mongoose.Schema;
 
 // Define schema
 const TalkSchema = new Schema({
-  id: String,
-  name: String,
-  description: String,
+  _id: {type: Number},
+  name: {type: String},
+  description: {type: String},
   speakers: {any: Schema.Types.Mixed},
   attendees: {any: Schema.Types.Mixed},
-  talkTime: Number,
-  talkDuration: Number,
-  maxAttendees: Number,
+  talkTime: {type: Number},
+  talkDuration: {type: Number},
+  maxAttendees: {type: Number},
 });
 
 // Declare model to mongoose
