@@ -1,6 +1,8 @@
 const Attendee = require('../models/attendee');
 const Talk = require('./talks');
 
+const findAttendee = async id => Attendee.findById(id);
+
 const updateSelectedAttendee = async (id, updatedObject) => {
   await Attendee.findByIdAndUpdate(id, updatedObject, (err, attendee) => {
     if (err) throw err;
@@ -42,6 +44,7 @@ const registerForEvent = async (attendeeId, eventId) => {
 };
 
 module.exports = {
+  findAttendee,
   updateSelectedAttendee,
   registerAsGeneralAttendee,
   registerForEvent,

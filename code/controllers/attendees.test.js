@@ -16,8 +16,15 @@ Tape('Register for an event', (t) => {
   t.end();
 });
 
-Tape('', (t) => {
+Tape('Find attendee by id and update their name', (t) => {
   Db.connect();
-  t.notEqual()
+  const originalAttendee = Attendee.findAttendee(72);
+  const updatedObject = {
+    $set: {
+      name: "Janet Bruce",
+    },
+  };
+  const updatedAttendee = Attendee.updateSelectedAttendee(72, updatedObject);
+  t.notEqual(originalAttendee, updatedAttendee);
   t.end();
 });

@@ -18,7 +18,6 @@ Tape('Find item by id and update the name', (t) => {
     },
   };
   const updatedTalk = Talk.updateSelectedTalk(1, updatedObject);
-
   t.notEqual(originalTalk, updatedTalk);
   t.end();
 });
