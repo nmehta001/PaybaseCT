@@ -1,6 +1,6 @@
+const Tape = require('tape');
 const Db = require('../db/db');
 const Talk = require('../controllers/talks');
-const Tape = require('tape');
 
 Tape('Find all talks', (t) => {
   Db.connect();
@@ -23,8 +23,15 @@ Tape('Find item by id and update the name', (t) => {
   t.end();
 });
 
-Tape(`Map speakers to their id on the Talks model`, (t) => {
+Tape('Map speakers to their id on the Talks model', (t) => {
   Db.connect();
   Talk.joinSpeakers();
+  t.end();
+});
+
+Tape('Check a person can register to the event', (t) => {
+  Db.connect();
+  const canRegister = Talk.canRegister(1);
+  t.notEqual(canRegister, false);
   t.end();
 });

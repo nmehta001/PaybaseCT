@@ -9,7 +9,7 @@ const findTalks = async () => {
 const findTalk = async id => Talk.findById(id);
 
 const updateSelectedTalk = async (id, updatedObject) => {
-  Talk.findByIdAndUpdate(id, updatedObject, (err, talk) => {
+  await Talk.findByIdAndUpdate(id, updatedObject, (err, talk) => {
     if (err) throw err;
     console.log(talk);
   });
@@ -21,9 +21,16 @@ const joinSpeakers = async () => {
   console.log(joined);
 };
 
+const canRegister = async (id) => {
+  const talk = await Talk.findById(id);
+  const totalAttendees = talk.attendees.length;
+  return totalAttendees !== talk.maxAttendees;
+};
+
 module.exports = {
   findTalks,
   findTalk,
   updateSelectedTalk,
   joinSpeakers,
+  canRegister,
 };
